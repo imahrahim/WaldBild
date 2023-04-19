@@ -29,6 +29,12 @@ function setup() {
     // Callback function
     socket.on("message", (data) => {
       console.log("callback from server", data);
+         switch(data){
+        case 0:
+          background(4, 47, 16)
+          currentImage = 0;
+          break;
+      }
       switch(data){
         case 1:
           background(4, 47, 16)
