@@ -107,7 +107,7 @@ function setup() {
 function draw() {
   background(0);
 
-  image(imageArray[currentImage], 0, 0, imageArray[currentImage].width*height/imageArray[currentImage].height, height);
+  image(imageArray[currentImage], 0, 0, width, imageArray[currentImage].height*width/imageArray[currentImage].width);
 }
 
 function keyPressed() {
