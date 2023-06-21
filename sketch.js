@@ -105,9 +105,9 @@ function setup() {
 }
 
 function draw() {
-  background(4, 47, 16, 30);
+  background(0);
 
-  image(imageArray[currentImage], 0, 0,width,height);
+  image(imageArray[currentImage], 0, 0, width, imageArray[currentImage].height*width/imageArray[currentImage].width);
 }
 
 function keyPressed() {
@@ -115,3 +115,7 @@ function keyPressed() {
     saveCanvas("fungi", "png");
   }
  }
+
+ function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
