@@ -20,7 +20,7 @@ let currentImage = 0;
 
 
 function setup() {
-  createCanvas(1920, 1080);
+  createCanvas(windowWidth, windowHeight);
 
   //socket = socket.io.connect('http://localhost:3000');
   socket = io.connect("https://dda-miflck.herokuapp.com/");
@@ -29,7 +29,7 @@ function setup() {
     // Callback function
     socket.on("message", (data) => {
       console.log("callback from server", data);
-         switch(data){
+      switch(data){
         case 0:
           background(4, 47, 16)
           currentImage = 0;
@@ -107,7 +107,7 @@ function setup() {
 function draw() {
   background(4, 47, 16, 30);
 
-  image(imageArray[currentImage], 0, 0);
+  image(imageArray[currentImage], 0, 0,width,height);
 }
 
 function keyPressed() {
